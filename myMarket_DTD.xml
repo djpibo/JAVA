@@ -1,0 +1,59 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE food [
+
+
+<!-- 마트에서 파는 물품들을 종목별로 요소화 -->
+<!ELEMENT food (snack | beverage | fruit | vegetable | fishery | meat | address | infodesk)*>
+<!ELEMENT snack (#PCDATA)*>
+<!ELEMENT beverage (#PCDATA)*>
+<!ELEMENT fruit (#PCDATA)*>
+<!ELEMENT vegetable (#PCDATA)*>
+<!ELEMENT fishery (#PCDATA)*>
+<!ELEMENT meat (#PCDATA | pork | beef)*>
+<!ELEMENT pork (#PCDATA)*>
+<!ELEMENT beef (#PCDATA)*>
+<!-- 시즌 상품 season 추가할 곳 -->
+<!--마트의 위치 및 안내데스크 위치-->
+<!ELEMENT address ANY>
+<!ELEMENT infodesk ANY>
+<!-- 분류된 종목별로 나뉜 요소의 가격 -->
+<!ATTLIST snack price CDATA #REQUIRED>
+<!ATTLIST beverage price CDATA #REQUIRED>
+<!ATTLIST fruit price CDATA #REQUIRED>
+<!ATTLIST vegetable price CDATA #REQUIRED>
+<!ATTLIST fishery price CDATA #REQUIRED>
+<!ATTLIST pork price CDATA #REQUIRED>
+<!ATTLIST beef price CDATA #REQUIRED>
+<!-- 분류된 종목별로 나뉜 요소의 이름 -->
+<!ATTLIST snack name CDATA #IMPLIED>
+<!ATTLIST beverage name CDATA #IMPLIED>
+<!ATTLIST fruit name CDATA #IMPLIED>
+<!ATTLIST vegetable name CDATA #IMPLIED>
+<!ATTLIST fishery name CDATA #IMPLIED>
+<!ATTLIST pork name CDATA #IMPLIED>
+<!ATTLIST beef name CDATA #IMPLIED>
+<!-- 마켓 주소 -->
+<!ENTITY market_address "서울 송파구 양재동">
+<!ENTITY info_address "매장 1층 에스컬레이터 오른편">
+
+]>
+<food>
+	<snack name = "감자깡" price = "1000" > orion
+</snack>
+	<beverage name ="초코우유" price ="500"> 초코에몽
+</beverage>
+	<fruit name = "사과" price = "5000"> 4개
+</fruit>
+	<vegetable name = "쪽파" price = "900"> 100g
+</vegetable>
+	<fishery name = "활어" price = "9900"> 산지직송
+</fishery>
+	<meat>
+		<pork name = "삽겹살" price = "14000"> 500g
+</pork>
+		<beef name = "등심" price = "13500"> 200g
+</beef>
+	</meat>
+	<address>&market_address;</address>
+	<infodesk>&info_address;</infodesk>
+</food>

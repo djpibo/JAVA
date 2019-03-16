@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<food>
+	<snack name = "감자깡" price = "1000" count="5" sample="0"> orion
+</snack>
+	<beverage name ="초코우유" price ="500" count="20" sample="0"> 초코에몽
+</beverage>
+	<fruit name = "사과" price = "5000" count="100" sample="1"> 4개
+</fruit>
+	<vegetable name = "쪽파" price = "900" count="50" sample="0"> 100g
+</vegetable>
+	<fishery name = "활어" price = "9900" count="10" sample="0"> 산지직송
+</fishery>
+	<meat>
+		<pork name = "삽겹살" price = "14000" count="50" sample="1"> 500g
+</pork>
+		<beef name = "등심" price = "13500" count="50" sample="1"> 200g
+</beef>
+	</meat>
+	<address>&market_address;</address>
+	<infodesk>&info_address;</infodesk>
+</food>
